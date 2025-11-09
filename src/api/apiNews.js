@@ -6,11 +6,13 @@ console.log('Base URL:', import.meta.env.VITE_NEWS_BASE_API_URL);
 const BASE_URL = 'https://api.currentsapi.services/v1';
 const API_KEY = 'S6ns1XyKpARWfqvG51wCQtB20KfD2S9w4nG-TO3GWbZYvia3';
 
-export const getNews = async () => {
+export const getNews = async (page_number = 1, page_size = 10) => {
   try {
-    const response = await axios.get(`${BASE_URL}/latest-news`, {
+    const response = await axios.get(`${BASE_URL}/search`, {
       params: {
         apiKey: API_KEY,
+        page_number,
+        page_size,
       },
     });
     return response.data;
