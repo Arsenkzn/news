@@ -28,7 +28,7 @@ export const getNews = async ({
 
 export const getCategories = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/availabel/categories`, {
+    const response = await axios.get(`${BASE_URL}/available/categories`, {
       params: {
         apiKey: API_KEY,
       },

@@ -34,35 +34,9 @@ const Main = () => {
   const fetchCategories = async () => {
     try {
       const response = await getCategories();
-
-      if (
-        response &&
-        response.status !== 'error' &&
-        Array.isArray(response.categories)
-      ) {
-        setCategories(['All', ...response.categories]);
-      } else {
-        setCategories([
-          'All',
-          'Technology',
-          'Sports',
-          'Business',
-          'Entertainment',
-          'Science',
-          'Health',
-        ]);
-      }
+      setCategories(['All', ...response.category]);
     } catch (error) {
-      console.log(error)
-      setCategories([
-        'All',
-        'Technology',
-        'Sports',
-        'Business',
-        'Entertainment',
-        'Science',
-        'Health',
-      ]);
+      console.log(error);
     }
   };
 
