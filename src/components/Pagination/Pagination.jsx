@@ -5,12 +5,12 @@ const Pagination = ({
   handleNextPage,
   handlePageClick,
   handlePreviousPage,
-  currenPage,
+  currentPage,
 }) => {
   return (
     <div className={styles.pagination}>
       <button
-        disabled={currenPage <= 1}
+        disabled={currentPage <= 1}
         onClick={handlePreviousPage}
         className={styles.arrow}
       >
@@ -21,7 +21,7 @@ const Pagination = ({
           return (
             <button
               onClick={() => handlePageClick(index + 1)}
-              disabled={index + 1 === currenPage}
+              disabled={index + 1 === currentPage}
               key={index}
               className={styles.pageNumber}
             >
@@ -32,7 +32,7 @@ const Pagination = ({
       </div>
 
       <button
-        disabled={currenPage >= totalPages}
+        disabled={currentPage >= totalPages}
         onClick={handleNextPage}
         className={styles.arrow}
       >
