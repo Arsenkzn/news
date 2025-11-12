@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-const Skeleton = ({ count = 1, type = 'banner' }) => {
+export const Skeleton = ({ count = 1, type = 'banner' }) => {
   return (
     <>
       {count > 1 ? (
@@ -19,4 +19,4 @@ const Skeleton = ({ count = 1, type = 'banner' }) => {
   );
 };
 
-export default Skeleton;
+//export default Skeleton;
