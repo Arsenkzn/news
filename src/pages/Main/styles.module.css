@@ -5,6 +5,15 @@
   gap: 32px;
 }
 
+.dark {
+  background-color: #23272f;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+
+.light {
+  background-color: white;
+}
+
 @media (max-width: 768px) {
   .main {
     grid-template-columns: 1fr;
