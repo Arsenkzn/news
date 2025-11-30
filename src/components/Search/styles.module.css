@@ -5,6 +5,15 @@
   gap: 12px;
 }
 
+.dark {
+  background-color: #23272f;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+
+.light {
+  background-color: white;
+}
+
 .input {
   width: 100%;
   padding: 10px;
