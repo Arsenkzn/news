@@ -1,7 +1,7 @@
-import withSkeleton from '../../helpers/hocs/withSkeleton';
-import { INews } from '../../Interfaces';
-import NewsItem from '../NewsItem/NewsItem';
+import { INews } from '@/Interfaces';
 import styles from './styles.module.css';
+import NewsItem from '../NewsItem/NewsItem';
+import withSkeleton from '@/helpers/hocs/withSkeleton';
 
 interface Props {
   news?: INews[];

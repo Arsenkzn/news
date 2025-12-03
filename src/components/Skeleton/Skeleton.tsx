@@ -1,4 +1,4 @@
-import { DirectionType, SkeletonType } from '../../Interfaces';
+import { DirectionType, SkeletonType } from '@/Interfaces';
 import styles from './styles.module.css';
 
 interface Props {
@@ -33,5 +33,3 @@ export const Skeleton = ({
     </>
   );
 };
-
-//export default Skeleton;

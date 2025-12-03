@@ -1,6 +1,6 @@
-import { useTheme } from '../../context/ThemeContext';
-import { IPaginationProps } from '../../Interfaces';
+import { IPaginationProps } from '@/Interfaces';
 import styles from './styles.module.css';
+import { useTheme } from '@/context/ThemeContext';
 
 const Pagination = ({
   totalPages,
