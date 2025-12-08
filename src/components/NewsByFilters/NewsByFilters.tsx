@@ -1,12 +1,12 @@
-import { TOTAL_PAGES } from '../../constants/constants';
-import { useDebounce } from '../../helpers/hooks/useDebounce';
-import NewsFilters from '../NewsFilters/NewsFilters';
-import NewsList from '../NewsList/NewsList';
-import PaginationWrapper from '../PaginationWrapper/PaginationWrapper';
-import { useAppDispatch, useAppSelector } from '../Store';
-import { useGetNewsQuery } from '../Store/services/newsApi';
-import { setFilters } from '../Store/Slices/newsSlice';
+import { useAppDispatch, useAppSelector } from '@/store';
 import styles from './styles.module.css';
+import { useGetNewsQuery } from '@/store/services/newsApi';
+import { setFilters } from '@/store/slices/newsSlice';
+import { useDebounce } from '@/helpers/hooks/useDebounce';
+import { TOTAL_PAGES } from '@/constants/constants';
+import NewsFilters from '../NewsFilters/NewsFilters';
+import PaginationWrapper from '../PaginationWrapper/PaginationWrapper';
+import NewsList from '../NewsList/NewsList';
 
 const NewsByFilters = () => {
   const dispatch = useAppDispatch();

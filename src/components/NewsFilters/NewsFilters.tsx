@@ -1,3 +1,4 @@
+import { useGetCategoriesQuery } from '@/store/services/newsApi';
 import { useTheme } from '../../context/ThemeContext';
 import { IFilters } from '../../Interfaces';
 import Categories from '../Categories/Categories';
@@ -7,6 +8,8 @@ import { useAppDispatch } from '../Store';
 import { useGetCategoriesQuery } from '../Store/services/newsApi';
 import { setFilters } from '../Store/Slices/newsSlice';
 import styles from './styles.module.css';
+import { useAppDispatch } from '@/store';
+import { setFilters } from '@/store/slices/newsSlice';
 interface Props {
   filters: IFilters;
 }
