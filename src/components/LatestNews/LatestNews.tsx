@@ -1,5 +1,6 @@
 import { useGetLatestNewsQuery } from '@/store/services/newsApi';
 import BannersList from '../BannersList/BannersList';
+import { useGetLatestNewsQuery } from '../Store/services/newsApi';
 import styles from './styles.module.css';
 
 const LatestNews = () => {
