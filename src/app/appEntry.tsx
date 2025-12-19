@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
+import { store } from './appStore';
+import BaseLayout from './layouts/BaseLayout';
 import './index.css';
-import { ThemeProvider } from '@/context/ThemeContext';
-import { store } from '@/store';
+import { ThemeProvider } from './providers/ThemeProvider';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
