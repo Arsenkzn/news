@@ -1,8 +1,8 @@
-import { newsApi } from '@/entities/news/api/newsApi';
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux';
 import { rootReducer } from './appReducer';
 import { categoriesApi } from '@/entities/category/api/categoriesApi';
+import { newsApi } from '@/entities/news/api/newsApi';
 
 export const store = configureStore({
   reducer: rootReducer,
