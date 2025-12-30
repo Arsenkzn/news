@@ -8,7 +8,7 @@ interface Props {
   type: 'banner' | 'item'
 }
 
-const NewsCard = ({ item, type = 'item' }: Props) => {
+const NewsCard = ({ item, type = 'banner' }: Props) => {
   return (
     <li className={`${styles.card} ${type === 'banner' && styles.banner}`}>
       {type === 'banner' ? (<Image image={item?.image} />) : (
