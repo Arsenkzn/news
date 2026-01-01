@@ -1,13 +1,12 @@
-import styles from './styles.module.css';
-import { useDebounce } from '@/shared/hooks/useDebounce';
-import NewsFilters from '@/widgets/news/ui/NewsFilters/NewsFilters';
-import { useAppSelector } from '@/app/appStore';
-import { useGetNewsQuery } from '@/entities/news/api/newsApi';
-import { useGetCategoriesQuery } from '@/entities/category/api/categoriesApi';
-import NewsListByPagination from '../NewsListByPagination/NewsListByPagination';
+import { useAppSelector } from "@/app/appStore";
+import { useDebounce } from "@/shared/hooks/useDebounce";
+import { useGetNewsQuery } from "@/entities/news/api/newsApi";
+import styles from "./styles.module.css";
+import { useGetCategoriesQuery } from "@/entities/category/api/categoriesApi";
+import { NewsFilters } from "@/widgets/news/ui";
+import NewsListByPagination from "../NewsListByPagination/NewsListByPagination";
 
 const NewsByFilters = () => {
-
   const filters = useAppSelector((state) => state.news.filters);
   const news = useAppSelector((state) => state.news.news);
 
@@ -17,14 +16,17 @@ const NewsByFilters = () => {
     ...filters,
     keywords: debouncedKeywords,
   });
-
   const { data } = useGetCategoriesQuery(null);
 
   return (
     <section className={styles.section}>
       <NewsFilters filters={filters} categories={data?.categories || []} />
 
-      <NewsListByPagination isLoading={isLoading} news={news} filters={filters}/>
+      <NewsListByPagination
+        isLoading={isLoading}
+        news={news}
+        filters={filters}
+      />
     </section>
   );
 };
